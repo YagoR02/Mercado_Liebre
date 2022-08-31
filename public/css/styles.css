@@ -121,6 +121,16 @@ div.offers{
     width: 70%;
 }
 
+.transition-description{
+    display: none;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.transition-description:hover{
+    display: block;
+}
+
 .discount,
 .description{
     font-size: 16px;
@@ -189,6 +199,65 @@ article div.main-article{
     padding: 15px;
 }
 
+.top-register{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 5px;
+}
+
+.item-register{
+    margin: 5px;
+    height: 35px;
+    box-sizing: border-box;
+}
+
+.bottom-register{
+    margin: 15px;
+    ;
+}
+
+.item-register-2{
+    margin: 5px;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.titulo-perfil{
+    padding-top:20px;
+}
+
+.titulo-interes{
+    padding:20px 40px 20px 0px;
+    box-sizing: border-box;
+}
+
+.login-user-pass{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px;
+}
+
+.item-login{
+    margin: 10px;
+    height: 35px;
+    box-sizing: border-box;
+}
+
+.boton-enviar{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 27px;
+    width: 66%;
+    position: absolute;
+}
+
+
 
 @media (max-width: 361px){
     nav{
@@ -197,9 +266,6 @@ article div.main-article{
 }
 
 @media (min-width: 361px){
-    main section article .description{
-        display: block;
-    }
 
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
