@@ -76,21 +76,6 @@ header .form .submit{
     width: 10%;
 }
 
-footer{
-    text-align: center;
-}
-
-article.iconos-footer i{
-    color: blue;
-    font-size: 2em;
-    margin-bottom: 10px;
-    padding-top: 30px;
-}
-
-section.legales{
-    padding-top: 30px;
-}
-
 div.burger-menu{
     text-align: center;
 }
@@ -121,14 +106,21 @@ div.offers{
     width: 70%;
 }
 
-.transition-description{
-    display: none;
-    transition-property: all;
-    transition-duration: 2s;
+.description{
+    visibility: hidden;
+    transition: visibility 100ms;
 }
 
-.transition-description:hover{
-    display: block;
+main section article:hover .description{
+    visibility: visible;
+}
+
+main section article .main-article i{
+    transition: transform 100ms;
+}
+
+main section article:hover .main-article i{
+    transform: rotate(-90deg);
 }
 
 .discount,
@@ -141,11 +133,6 @@ div.offers{
 h3,
 .description{
     color: #666;
-}
-
-.description{
-    display: none;
-    margin-top: 20px;
 }
 
 section.banner img{
@@ -199,6 +186,40 @@ article div.main-article{
     padding: 15px;
 }
 
+footer article i{
+    color: blue;
+    font-size: 2em;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    transition: color 100ms;
+}
+
+footer article:hover i{
+    color: rgb(34, 171, 118)
+}
+
+.footer-general{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+footer .credit-card{
+    padding: 10px;
+}
+
+footer .shield{
+    padding: 10px;
+}
+
+footer .gift{
+    padding: 10px;
+}
+
+section.legales{
+    padding-top: 30px;
+}
+
 .top-register{
     display: flex;
     flex-direction: column;
@@ -246,7 +267,7 @@ article div.main-article{
 }
 
 .boton-enviar{
-    background-color: #0044AA;
+    background-color: #0080aa;
     border-radius: 5px;
     color: #FFF;
     font-size: 20px;
@@ -255,6 +276,11 @@ article div.main-article{
     margin-left: 27px;
     width: 66%;
     position: absolute;
+    transition: background-color 100ms;
+}
+
+.boton-enviar:hover{
+    background-color: #0022AA;
 }
 
 
@@ -310,20 +336,17 @@ article div.main-article{
     
     header nav.completa{
         display: flex;
+        width: 90%;
+        justify-content: space-between;
     }
 
     nav ul.navbar{
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-grow: 0.5;
-       
+        
     }
     nav ul.login{
         display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-         flex-grow: 0.5;
+        
     }
 
     nav ul.navbar li{
